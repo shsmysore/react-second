@@ -1,68 +1,90 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+* {
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    margin: 0px;
+    font-family: 'Inter', sans-serif;
+    width: 550px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+header {
+    height: 90px;
+    background-color: #21222A;
+    padding: 30px 25px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+nav > img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav > p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #61DAFB;
+}
+
+.main-container {
+    background-color: #282D35;
+    width: 550px;
+    height: 460px;
+    background-image: url('./assets/reactjs-half.png');
+    background-repeat: no-repeat;
+    background-position: 100% 60%;  /* x,y position.*/
+    background-size: 25%;
+}
+
+.main-header-text {
+    width: 424px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: -2px; /* It's -5% of the font size.*/
+    line-height: 100%;
+    color: #FFFFFF;
+    margin: 0px;
+}
+
+.main-header-container {
+    padding-top: 58px;
+    padding-left: 27px;
+}
+
+.main-body-container {
+    padding-top: 47px;
+    height: 362px;
+}
+
+.main-facts-ul {
+    color: #FFFFFF;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 74px;
+    max-width: 390px;
+    height: 190px;
+}
+
+.main-facts-ul > li {
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0px;
+    margin-bottom: 20px;
+    list-style: none; /* Remove default list style */
+}
+
+.main-facts-ul > li::before { /* pseudo-element */
+    content: '\2022'; /* Replace with your desired symbol unicode or character */
+    position: absolute;
+    left: 51px;
+    color: #61DAFB; /* Custom color for the bullet */
+    font-size: 20px; /* Adjust the bullet size as needed. Unicodes trated as text*/
 }
